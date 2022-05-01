@@ -32,12 +32,39 @@ class calculadoraTest {
 		float rReal = calculadora.subtracao(n1, n2);
 		assertEquals(rReal, rEsperado);
 	}
+	
+	@Test
+	void test2Subtracao() {
+		float n1 = -10;
+		float n2 = -5;
+		float rEsperado = -5;
+		float rReal = calculadora.subtracao(n1, n2);
+		assertEquals(rReal, rEsperado);
+	}
 
 	@Test
 	void testMultiplicacao() {
 		float n1 = 10;
 		float n2 = 5;
 		float rEsperado = 50;
+		float rReal = calculadora.multiplicacao(n1, n2);
+		assertEquals(rReal, rEsperado);
+	}
+	
+	@Test
+	void test2Multiplicacao() {
+		float n1 = -10;
+		float n2 = -5;
+		float rEsperado = 50;
+		float rReal = calculadora.multiplicacao(n1, n2);
+		assertEquals(rReal, rEsperado);
+	}
+	
+	@Test
+	void test3Multiplicacao() {
+		float n1 = -10;
+		float n2 = 5;
+		float rEsperado = -50;
 		float rReal = calculadora.multiplicacao(n1, n2);
 		assertEquals(rReal, rEsperado);
 	}
@@ -50,12 +77,30 @@ class calculadoraTest {
 		float rReal = calculadora.divisao(n1, n2);
 		assertEquals(rReal, rEsperado);
 	}
+	
+	@Test
+	void test2Divisao() {
+		float n1 = 10;
+		float n2 = -2;
+		float rEsperado = -5;
+		float rReal = calculadora.divisao(n1, n2);
+		assertEquals(rReal, rEsperado);
+	}
 
 	@Test
 	void testPotenciacao() {
 		float n1 = 10;
 		float n2 = 5;
 		float rEsperado = 100000;
+		float rReal = calculadora.potenciacao(n1, n2);
+		assertEquals(rReal, rEsperado);
+	}
+	
+	@Test
+	void test2Potenciacao() {
+		float n1 = 10;
+		float n2 = -2;
+		float rEsperado = (float) 0.01;
 		float rReal = calculadora.potenciacao(n1, n2);
 		assertEquals(rReal, rEsperado);
 	}
@@ -72,6 +117,14 @@ class calculadoraTest {
 	void testFatorial() {
 		int n = 5;
 		int rEsperado = 120;
+		int rReal = calculadora.fatorial(n);
+		assertEquals(rReal, rEsperado);
+	}
+	
+	@Test
+	void test2Fatorial() {
+		int n = 1;
+		int rEsperado = 1;
 		int rReal = calculadora.fatorial(n);
 		assertEquals(rReal, rEsperado);
 	}
